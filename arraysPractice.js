@@ -72,6 +72,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
     }
   };
 
+  // We did this modification in place on purpose
   evenFinder(nums);
   console.log(nums);
 
