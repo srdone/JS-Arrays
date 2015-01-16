@@ -20,7 +20,11 @@ var arr = [40,50,60];
 
 
   //Code Here
+  var last = function(arr) {
+    return arr[arr.length - 1];
+  };
 
+  console.log('last in ' + arr + ': ' + last(arr));
 
 //Next Problem
 
