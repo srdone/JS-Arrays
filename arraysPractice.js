@@ -211,8 +211,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+  var addTen = function(numbers) {
+    var result = [];
+    for(var i = 0; i < numbers.length; i++) {
+      result.push(+numbers[i] + 10); // use '+' to convert strings to numbers
+    }
+    return result;
+  };
 
-
+  console.log(addTen(numbers));
 
 //Next Problem
 
