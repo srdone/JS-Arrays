@@ -239,7 +239,19 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
+  var longest = function(arr1, arr2) {
+    if(arr1.length > arr2.length) {
+      return arr1;
+    } else if (arr1.length < arr2.length) {
+      return arr2;
+    } else {
+      return -1; // we return -1 if they are the same length
+    }
+  };
 
+  console.log('arr1: ' + arr1);
+  console.log('arr2: ' + arr2);
+  console.log('longest: (-1 if same length) ' + longest(arr1, arr2));
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
