@@ -157,6 +157,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+  var removeItem = function(item) {
+    // reverse through the array so we don't miss anything by indexing over it
+    for (var i = myGroceryList.length - 1; i >= 0; i--) {
+      if (myGroceryList[i] === item) {
+        myGroceryList.splice(i,1); //remove item
+      }
+    }
+  };
+
+  var addItem = function(item) {
+    //don't add the item if it is already there
+    if (myGroceryList.indexOf(item) === -1) {
+      myGroceryList.push(item);
+    }
+  };
+
+  console.log('Remove chips: ');
+  removeItem('chips');
+  console.log(myGroceryList);
+
+  console.log('Add Jerky: ');
+  addItem('Jerky');
+  console.log(myGroceryList);
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
