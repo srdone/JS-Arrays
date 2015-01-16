@@ -88,7 +88,21 @@ var odds = [];
 
 
   //Code Here
+  var divider = function(nums, evens, odds) {
+    for (var i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 === 0) {
+        evens.push(nums[i]);
+      } else {
+        odds.push(nums[i]);
+      }
+    }
+    return [evens, odds];
+  };
 
+  //We are modifying in place
+  console.log(divider(nums, evens, odds));
+  console.log(evens);
+  console.log(odds);
 
 //Next Problem
 
