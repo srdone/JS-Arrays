@@ -259,3 +259,22 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+  var both = function(arr1, arr2) {
+    var result = [];
+    for (var i = 0; i < arr1.length; i++) {
+      for (var j = 0; j < arr2.length; j++) {
+        // we will ignore any duplicates this process creates
+        // (though it only would create duplicates if there were duplicates inside
+        // at least one array - a general case)
+        // we are looping throuh every element of arr2 once for each element of arr1
+        // this is to allow generality - we could assume that they are in the same
+        // order and this would allow us to make the algorithm considerably faster.
+        if (arr2[j] === arr1[i]) {
+          result.push(arr1[i]);
+        }
+      }
+    }
+    return result;
+  };
+
+  console.log(both(arr1,arr2));
