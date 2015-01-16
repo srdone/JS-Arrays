@@ -193,8 +193,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+  var maker = function() {
+    var result = [];
+    for (var i = 1; i <= 215; i++) {
+      result.push(i);
+    }
+    return result;
+  };
 
-
+  console.log(maker());
 
 //Next Problem
 
